@@ -1,0 +1,7 @@
+SELECT [Имя Продукта], [Категория]
+FROM Текущая_Таблица
+LEFT JOIN ПродуктКатегория pc
+	ON p.Id = pc.ПродуктId
+LEFT JOIN Категория c
+	ON pc.КатегорияId = c.Id;
+ORDER BY p.Name;
